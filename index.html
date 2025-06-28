@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحلال شرکہ</title>
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #fdfdfd;
+            padding: 30px;
+            direction: rtl;
+        }
+        header, footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #004d40;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #00695c;
+        }
+        section {
+            margin: 30px 0;
+        }
+        .department-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
+        }
+        .department-item {
+            background: #e0f2f1;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        form {
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            margin: 5px 0 15px;
+            padding: 8px;
+        }
+        .language-switcher {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>الحلال شرکہ</h1>
+        <p>خوش آمدید ہماری ویب سائٹ پر</p>
+        <div class="language-switcher">
+            🌐 زبان: 
+            <a href="#">اردو</a> | 
+            <a href="#">English</a> | 
+            <a href="#">عربی</a>
+        </div>
+        <nav>
+            <a href="#about">تعارف</a>
+            <a href="#departments">ڈیپارٹمنٹس</a>
+            <a href="#contact">رابطہ</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>تعارف</h2>
+        <p>یہ الحلال شرکہ ایک مکمل اسلامی کاروباری ادارہ ہے جو مختلف شعبوں میں خدمات فراہم کرتا ہے۔</p>
+    </section>
+
+    <section id="departments">
+        <h2>ڈیپارٹمنٹس</h2>
+        <div class="department-list">
+            <div class="department-item">ڈیپارٹمنٹ 1</div>
+            <div class="department-item">ڈیپارٹمنٹ 2</div>
+            <div class="department-item">ڈیپارٹمنٹ 3</div>
+            <div class="department-item">ڈیپارٹمنٹ 4</div>
+            <div class="department-item">ڈیپارٹمنٹ 5</div>
+            <div class="department-item">ڈیپارٹمنٹ 6</div>
+            <div class="department-item">ڈیپارٹمنٹ 7</div>
+            <div class="department-item">ڈیپارٹمنٹ 8</div>
+            <div class="department-item">ڈیپارٹمنٹ 9</div>
+            <div class="department-item">ڈیپارٹمنٹ 10</div>
+            <!-- مزید 50 تک ایڈ کیے جا سکتے ہیں -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>رابطہ کریں</h2>
+        <form>
+            <label>نام:</label>
+            <input type="text" name="name" required>
+
+            <label>ای میل:</label>
+            <input type="email" name="email" required>
+
+            <label>پیغام:</label>
+            <textarea name="message" rows="4" required></textarea>
+
+            <button type="submit">بھیجیں</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 الحلال شرکہ | تمام حقوق محفوظ ہیں۔</p>
+    </footer>
+
+</body>
+</html>
