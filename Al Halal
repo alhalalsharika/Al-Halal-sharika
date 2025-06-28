@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الحلال شرکہ | Al-Halal Sharika</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #007BFF; }
+    .lang-switcher button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1 id="title">الحلال شرکہ</h1>
+  <div class="lang-switcher">
+    <button onclick="setLanguage('ur')">اردو</button>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('ar')">العربية</button>
+  </div>
+
+  <nav>
+    <a href="#home" id="nav-home">ہوم</a>
+    <a href="#about" id="nav-about">تعارف</a>
+    <a href="#departments" id="nav-dept">ڈیپارٹمنٹس</a>
+  </nav>
+
+  <section id="home">
+    <h2 id="home-title">خوش آمدید</h2>
+    <p id="home-desc">ہماری ویب سائٹ پر خوش آمدید۔</p>
+  </section>
+
+  <section id="about">
+    <h2 id="about-title">تعارف</h2>
+    <p id="about-desc">الحلال شرکہ ایک اسلامی اصولوں پر مبنی ادارہ ہے۔</p>
+  </section>
+
+  <section id="departments">
+    <h2 id="dept-title">ڈیپارٹمنٹس</h2>
+    <p id="dept-desc">ہمارے یہاں 50 سے زائد ڈیپارٹمنٹس کام کر رہے ہیں۔</p>
+  </section>
+
+  <script>
+    const content = {
+      ur: {
+        title: "الحلال شرکہ",
+        nav: ["ہوم", "تعارف", "ڈیپارٹمنٹس"],
+        home: ["خوش آمدید", "ہماری ویب سائٹ پر خوش آمدید۔"],
+        about: ["تعارف", "الحلال شرکہ ایک اسلامی اصولوں پر مبنی ادارہ ہے۔"],
+        dept: ["ڈیپارٹمنٹس", "ہمارے یہاں 50 سے زائد ڈیپارٹمنٹس کام کر رہے ہیں۔"]
+      },
+      en: {
+        title: "Al-Halal Sharika",
+        nav: ["Home", "About Us", "Departments"],
+        home: ["Welcome", "Welcome to our official website."],
+        about: ["About Us", "Al-Halal Sharika is an organization based on Islamic principles."],
+        dept: ["Departments", "We operate with more than 50 departments."]
+      },
+      ar: {
+        title: "شركة الحلال",
+        nav: ["الرئيسية", "التعريف بالشركة", "الأقسام"],
+        home: ["أهلاً وسهلاً", "مرحباً بكم في موقعنا الرسمي."],
+        about: ["التعريف بالشركة", "شركة الحلال هي مؤسسة قائمة على المبادئ الإسلامية."],
+        dept: ["الأقسام", "لدينا أكثر من 50 قسماً يعملون معنا."]
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
+
+      document.getElementById("title").innerText = content[lang].title;
+      document.getElementById("nav-home").innerText = content[lang].nav[0];
+      document.getElementById("nav-about").innerText = content[lang].nav[1];
+      document.getElementById("nav-dept").innerText = content[lang].nav[2];
+
+      document.getElementById("home-title").innerText = content[lang].home[0];
+      document.getElementById("home-desc").innerText = content[lang].home[1];
+
+      document.getElementById("about-title").innerText = content[lang].about[0];
+      document.getElementById("about-desc").innerText = content[lang].about[1];
+
+      document.getElementById("dept-title").innerText = content[lang].dept[0];
+      document.getElementById("dept-desc").innerText = content[lang].dept[1];
+    }
+  </script>
+</body>
+</html>
